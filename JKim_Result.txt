@@ -1,0 +1,39 @@
+Initial Memory: 1048576
+Addresses [0 : 1048576] Free
+
+allocator>RQ P0 262144 W
+allocator>RQ P1 262144 W
+allocator>RQ P2 262200 W
+allocator>STAT
+Addresses [0 : 262144] P0
+Addresses [262145 : 524288] P1
+Addresses [524289 : 786488] P2
+Addresses [786489 : 1048576] Free
+
+allocator>RL P1
+allocator>RQ P3 200000 W
+allocator>STAT
+Addresses [0 : 262144] P0
+Addresses [262145 : 462144] P3
+Addresses [462145 : 524288] Free
+Addresses [524289 : 786488] P2
+Addresses [786489 : 1048576] Free
+
+allocator>RQ P4 200000 W
+allocator>STAT
+Addresses [0 : 262144] P0
+Addresses [262145 : 462144] P3
+Addresses [462145 : 524288] Free
+Addresses [524289 : 786488] P2
+Addresses [786489 : 986488] P4
+Addresses [986489 : 1048576] Free
+
+allocator>C
+allocator>STAT
+Addresses [0 : 262144] P0
+Addresses [262145 : 462144] P3
+Addresses [462145 : 724344] P2
+Addresses [724345 : 924344] P4
+Addresses [924345 : 1048576] Free
+
+allocator>QUIT
